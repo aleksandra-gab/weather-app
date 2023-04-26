@@ -22,24 +22,38 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-7 main">
-          <h1>Weather in: Milan</h1>
-          <h2>Wednesday, 26/04/2023 <br />12:28</h2>
+      <div class="page-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-7 main">
+              <h1>Weather in: Milan</h1>
+              <h2>Wednesday, 26/04/2023 <br />12:28</h2>
+            </div>
+            <div class="col-5 details">
+              <div class="degrees">
+                <span id="emoji">☀️</span> <span id="number"> 19 </span
+                ><span id="units"
+                  ><a href="#" id="celsius">°C</a> |
+                  <a href="#" id="fahrenheit">°F </a></span
+                >
+              </div>
+
+              Description: Sunny <span id="description"></span> <br />
+              <span id="humidity">Humidity: 32</span>%<br />
+              Wind: 6<span id="wind"></span> km/h
+            </div>
+          </div>
         </div>
-        <div class="col-5 details">
-          <div class="degrees">☀️ 19 °C | °F</div>
-          <div class="description">Description: Sunny</div>
-          <div class="humidity">Humidity: 32%</div>
-          <div class="wind">Wind: 6 km/h</div>
-        </div>
+        <small>
+          <a
+            href="https://github.com/aleksandra-gab/weather-app"
+            target="_blank"
+            class="github-link"
+            >Open-source code</a
+          >
+          by Aleksandra Jablonska
+        </small>
       </div>
-      <small>
-        <a href="https://github.com/aleksandra-gab/weather-app" target="_blank"
-          >Open-source code</a
-        >
-        by Aleksandra Jablonska</small
-      >
     </div>
     <script src="src/app.js"></script>
   </body>

@@ -12,16 +12,40 @@ h2 {
   font-size: 16px;
 }
 
-.container {
+.page-wrapper {
   max-width: 700px;
+  margin: 20px auto;
+}
+
+.weather-app {
   background: white;
   padding: 25px;
   border-radius: 10px;
-  margin: 20px auto;
   border: 1px solid lightpink;
 }
 
+.github-link {
+  color: pink;
+  text-decoration: none;
+}
 .degrees {
   font-size: 20px;
   font-weight: bold;
+}
+
+#celsius,
+#fahrenheit {
+  color: black;
+  text-decoration: none;
+}
+
+#celsius:hover,
+#fahrenheit:hover {
+  color: grey;
+}
+
+#units {
+  font-size: 12px;
+  position: relative;
+  top: -6px;
 }
