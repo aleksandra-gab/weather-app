@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -26,21 +27,21 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-7 main">
-              <h1>Weather in: Milan</h1>
+              <h1>Weather in: <span id="city">Milan</span></h1>
               <h2>Wednesday, 26/04/2023 <br />12:28</h2>
             </div>
             <div class="col-5 details">
               <div class="degrees">
-                <span id="emoji">☀️</span> <span id="number"> 19 </span
+                <span id="emoji">☀️</span> <span id="number"> </span
                 ><span id="units"
-                  ><a href="#" id="celsius">°C</a> |
+                  ><a href="#" id="celsius"> °C</a> |
                   <a href="#" id="fahrenheit">°F </a></span
                 >
               </div>
 
-              Description: Sunny <span id="description"></span> <br />
-              <span id="humidity">Humidity: 32</span>%<br />
-              Wind: 6<span id="wind"></span> km/h
+              Description: <span id="description"></span> <br />
+              Humidity: <span id="humidity"> </span>%<br />
+              Wind: <span id="wind"></span> km/h
             </div>
           </div>
         </div>
