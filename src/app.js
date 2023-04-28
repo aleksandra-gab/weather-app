@@ -1,25 +1,29 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()];
-  let hours = date.getHours();
-  if (hours < 10) {
-    minuhourstes = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  return `${day}, ${hours}:${minutes}`;
-}
+let now = new Date();
+
+let weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let weekday = weekdays[now.getDay()];
+
+let date = ("0" + now.getDate()).slice(-2);
+
+let months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let month = ("0" + months[now.getMonth()]).slice(-2);
+
+let year = now.getFullYear();
+
+let hours = now.getHours();
+
+let minutes = ("0" + now.getMinutes()).slice(-2);
+
+let currentTime = document.querySelector("#time");
+currentTime.innerHTML = `${weekday}, ${date}/${month}/${year} <br />${hours}:${minutes}`;
 
 function displayWeather(response) {
   let number = document.querySelector("#number");
@@ -32,8 +36,6 @@ function displayWeather(response) {
   humidity.innerHTML = response.data.temperature.humidity;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
-  let time = document.querySelector("#time");
-  time.innerHTML = formatDate(response.data.time * 1000);
 }
 
 let apiKey = "739473ae0tafe02b875bc88cd82o1460";
