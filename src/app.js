@@ -42,6 +42,7 @@ function displayWeather(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   icon.setAttribute("alt", response.data.condition.description);
+  celsiusTemperature = response.data.temperature.current;
 }
 
 function search(city) {
@@ -56,7 +57,28 @@ function handleSubmit(event) {
   search(cityInput.value);
 }
 
-search("Milan");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function changeToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let number = document.querySelector("#number");
+  number.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function changeToCelsius(event) {
+  event.preventDefault();
+  let degrees = document.querySelector("#number");
+  degrees.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeToFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeToCelsius);
+
+let celsiusTemperature = null;
+
+search("Milan");
