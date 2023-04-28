@@ -25,9 +25,24 @@
     <div class="container">
       <div class="page-wrapper">
         <div class="weather-app">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-3">
+                <input
+                  type="search"
+                  placeholder="City"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Search" />
+              </div>
+            </div>
+          </form>
           <div class="row">
             <div class="col-7 main">
-              <h1>Weather in: <span id="city">Milan</span></h1>
+              <h1>Weather in: <span id="city"></span></h1>
               <h2 id="time"></h2>
             </div>
             <div class="col-5 details">
