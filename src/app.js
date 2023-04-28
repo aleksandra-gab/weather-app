@@ -11,16 +11,28 @@ let weekdays = [
 ];
 let weekday = weekdays[now.getDay()];
 
-let date = ("0" + now.getDate()).slice(-2);
+let date = now.getDate();
+if (date < 10) {
+  date = `0${date}`;
+}
 
 let months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-let month = ("0" + months[now.getMonth()]).slice(-2);
+let month = months[now.getMonth()];
+if (month < 10) {
+  month = `0${month}`;
+}
 
 let year = now.getFullYear();
 
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 
-let minutes = ("0" + now.getMinutes()).slice(-2);
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 let currentTime = document.querySelector("#time");
 currentTime.innerHTML = `${weekday}, ${date}/${month}/${year} <br />${hours}:${minutes}`;
