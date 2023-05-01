@@ -37,18 +37,9 @@ form {
   font-weight: bold;
 }
 
-#celsius,
-#fahrenheit {
+#celsius {
   color: black;
   text-decoration: none;
-}
-
-#celsius:hover,
-#fahrenheit:hover {
-  opacity: 0.5;
-}
-
-#units {
   font-size: 12px;
   position: relative;
   top: -6px;

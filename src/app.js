@@ -124,25 +124,4 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function changeToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let number = document.querySelector("#number");
-  number.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function changeToCelsius(event) {
-  event.preventDefault();
-  let degrees = document.querySelector("#number");
-  degrees.innerHTML = Math.round(celsiusTemperature);
-}
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeToFahrenheit);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", changeToCelsius);
-
-let celsiusTemperature = null;
-
 search("Milan");
