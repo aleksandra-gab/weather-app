@@ -68,7 +68,8 @@ form {
   font-size: 16px;
 }
 
-.low {
+.min,
+.forecast-date {
   opacity: 0.5;
 }
 
