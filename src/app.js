@@ -37,6 +37,32 @@ if (minutes < 10) {
 let currentTime = document.querySelector("#time");
 currentTime.innerHTML = `${weekday}, ${date}/${month}/${year} <br />${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+        <div class="forecast-date">${day}</div>
+        <img
+          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+          alt=""
+          width="42"
+        />
+        <div class="forecast-temperature">
+          <span class="high">18°</span> <span class="low"> 12°</span>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   let number = document.querySelector("#number");
   number.innerHTML = Math.round(response.data.temperature.current);
@@ -55,6 +81,7 @@ function displayWeather(response) {
   );
   icon.setAttribute("alt", response.data.condition.description);
   celsiusTemperature = response.data.temperature.current;
+  displayForecast();
 }
 
 function search(city) {

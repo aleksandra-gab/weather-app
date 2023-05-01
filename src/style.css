@@ -60,7 +60,7 @@ form {
 }
 
 .forecast {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -70,4 +70,8 @@ form {
 
 .low {
   opacity: 0.5;
+}
+
+.degrees {
+  margin-top: -35px;
 }
