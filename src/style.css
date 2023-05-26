@@ -16,6 +16,10 @@ form {
   margin-bottom: 15px;
 }
 
+.container {
+  margin: 60px auto;
+}
+
 .page-wrapper {
   max-width: 700px;
   margin: 20px auto;
