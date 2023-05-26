@@ -73,12 +73,12 @@ form {
 }
 
 #search-button {
-  background: white;
-  color: #fe6e61;
+  background: #fe6e61;
+  color: white;
 }
 
 #search-button:hover {
-  color: white;
-  background: #fe6e61;
+  color: #fe6e61;
+  background: white;
   transition: all 200ms ease-in-out;
 }
