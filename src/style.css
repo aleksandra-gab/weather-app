@@ -25,15 +25,15 @@ form {
   background: white;
   padding: 25px;
   border-radius: 10px;
-  border: 1px solid lightpink;
+  border: 1px solid #fe6e61;
 }
 
 .github-link {
-  color: lightpink;
+  color: #fe6e61;
   text-decoration: none;
 }
 .degrees {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   margin-top: -35px;
 }
@@ -43,7 +43,7 @@ form {
   text-decoration: none;
   font-size: 12px;
   position: relative;
-  top: -6px;
+  top: -11px;
 }
 
 #description,
@@ -63,4 +63,22 @@ form {
 .min,
 .forecast-date {
   opacity: 0.5;
+}
+
+#city-input,
+#search-button {
+  border-radius: 10px;
+  border: 1px solid #fe6e61;
+  padding: 6px;
+}
+
+#search-button {
+  background: white;
+  color: #fe6e61;
+}
+
+#search-button:hover {
+  color: white;
+  background: #fe6e61;
+  transition: all 200ms ease-in-out;
 }
